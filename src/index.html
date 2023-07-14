@@ -8,6 +8,35 @@
 </head>
 
 <body>
+  <header>
+    <!-- estos elementos no pueden tener atributos id, ni name, ni class. -->
+    <h1>Analizador de Texto</h1>
+  </header>
+
+  <p>Breves instrucciones porque usuario (҂⌣̀_⌣́)</p>
+
+  <section id="text-box-container">
+    <!-- estos elementos no pueden tener atributos id, ni class. -->
+    <textarea name="user-input"></textarea>
+    
+  </section>
+  <button id="reset-button">Limpiar</button>
+<div id="resultados">
+  <!-- estos elementos no pueden tener atributos id ni name ni hijos. -->
+  <ul>
+    <li>recuento de palabras</li><!-- debe tener un atributo data-testid con valor word-count. -->
+    <li>recuento de caracteres</li><!--debe tener un atributo data-testid con valor character-count.-->
+    <li>recuento de caracteres excluyendo espacios y signos de puntuacion</li><!--debe tener un atributo data-testid con valor character-no-spaces-count.-->
+    <li>recuento de números</li><!--debe tener un atributo data-testid con valor number-count.-->
+    <li>suma total de números</li><!--debe tener un atributo data-testid con valor number-sum.-->
+    <li>longitud media de palabras</li><!--debe tener un atributo data-testid con valor word-length-average.-->
+  </ul>
+</div>
+
+<footer>
+  <!-- no pueden tener atributos id, ni name, ni class. -->
+  <p>Carolina Moreno</p>
+</footer>
   <script src="index.js" type="module"></script>
 </body>
 </html>

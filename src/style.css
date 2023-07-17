@@ -1,0 +1,13 @@
+/*Uso de selectores de CSS
+
+ La aplicación usa selectores CSS de tipo para darle estilo al <header> y al <footer>.
+
+ La aplicación usa selectores CSS de class para darle estilo a los <li> descrito anteriormente.
+
+ La aplicación usa selectores de atributo para darle estilo al <textarea> usando el atributo name.
+
+ La aplicación usa selectores CSS de ID para darle estilo al <button> con el atributo id en el valor reset-button.
+
+Modelo de caja (box model): border, margen, padding
+
+ Las clases css de los <li> hijos del <ul> definen un estilo usando las propiedades del modelo de caja, (background, border, margin, padding).*/

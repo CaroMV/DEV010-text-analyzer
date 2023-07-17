@@ -1,7 +1,32 @@
 import analyzer from './analyzer.js';
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-// Uso de selectores del DOM
+// Dom references:
+const userInput = document.querySelector('textarea');
+const wordCount = document.querySelector('[data-testid="word-count"]'); // 3 años en encontrar el howto de esto :')
+const characterCount = document.querySelector('[data-testid="character-count"]');
+const characterNoSpacesCount = document.querySelector('[data-testid="character-no-spaces-count"]');
+const numberCount = document.querySelector('[data-testid="number-count"]');
+const numberSum = document.querySelector('[data-testid="number-sum"]');
+const wordLengthAverage = document.querySelector('[data-testid="word-length-average"]');
+const resetButton = document.getElementById("reset-button");
 
+// detectar al usuario y trigerear las funciones:
+userInput.addEventListener('keyup', () => {
+  const text = userInput.value; // input
+  
+  wordCount.textContent = `Recuento de palabras: ${analyzer.getWordCount(text)}`;
+  characterCount.textContent = `Recuento de caracteres: ${analyzer.getCharacterCount(text)}`;
+  characterNoSpacesCount.textContent = `Recuento de caracteres (sin espacios ni puntuación): ${analyzer.getCharacterCountExcludingSpaces(text)}`;
+  numberCount.textContent = `Recuento de números: ${analyzer.getNumberCount(text)}`; // se corrige el nombre de la función
+  numberSum.textContent = `Suma total de números: ${analyzer.getNumberSum(text)}`; // se corrige el nombre de la función
+  wordLengthAverage.textContent = `Longitud media de palabras: ${analyzer.getAverageWordLength(text)}`;
+});
+
+// boton
+resetButton.addEventListener('click', () => {
+  userInput.value = '';
+  userInput.focus();
+});
 // La aplicación usa el selector del DOM querySelector.
 
 // La aplicación usa el selector del DOM getElementById.
@@ -12,7 +37,7 @@ import analyzer from './analyzer.js';
 
 // La aplicación registra un Event Listener para escuchar el evento click del <button> que limpia el contenido de la caja de texto.
 
-//Manipulación dinámica del DOM
+// Manipulación dinámica del DOM
 
 //La aplicación actualiza el atributo textContent o innerHTML de los <li> que mostrar las métricas del texto.
 

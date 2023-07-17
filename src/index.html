@@ -12,31 +12,35 @@
     <!-- estos elementos no pueden tener atributos id, ni name, ni class. -->
     <h1>Analizador de Texto</h1>
   </header>
-
+  <section>
   <p>Breves instrucciones porque usuario (҂⌣̀_⌣́)</p>
-
+  </section>
+  <main>
   <section id="text-box-container">
     <!-- estos elementos no pueden tener atributos id, ni class. -->
     <textarea name="user-input"></textarea>
     
   </section>
-  <button id="reset-button">Limpiar</button>
-<div id="resultados">
+  <section>
+    <button id="reset-button">Limpiar</button>
+  </section>
+  <section id="resultados">
   <!-- estos elementos no pueden tener atributos id ni name ni hijos. -->
-  <ul>
-    <li>recuento de palabras</li><!-- debe tener un atributo data-testid con valor word-count. -->
-    <li>recuento de caracteres</li><!--debe tener un atributo data-testid con valor character-count.-->
-    <li>recuento de caracteres excluyendo espacios y signos de puntuacion</li><!--debe tener un atributo data-testid con valor character-no-spaces-count.-->
-    <li>recuento de números</li><!--debe tener un atributo data-testid con valor number-count.-->
-    <li>suma total de números</li><!--debe tener un atributo data-testid con valor number-sum.-->
-    <li>longitud media de palabras</li><!--debe tener un atributo data-testid con valor word-length-average.-->
-  </ul>
-</div>
+    <ul>
+      <li data-testid="word-count">Recuento de palabras: 0</li><!-- debe tener un atributo data-testid con valor word-count. -->
+      <li data-testid="character-count">Recuento de caracteres: 0</li><!--debe tener un atributo data-testid con valor character-count.-->
+      <li data-testid="character-no-spaces-count">Recuento de caracteres (sin espacios ni puntuación): 0</li><!--debe tener un atributo data-testid con valor character-no-spaces-count.-->
+      <li data-testid="number-count">Recuento de números: 0</li><!--debe tener un atributo data-testid con valor number-count.-->
+      <li data-testid="number-sum">Suma total de números: 0</li><!--debe tener un atributo data-testid con valor number-sum.-->
+      <li data-testid="word-length-average">Longitud media de palabras: 0</li><!--debe tener un atributo data-testid con valor word-length-average.-->
+    </ul>
+  </section>
+  </main>
 
-<footer>
+  <footer>
   <!-- no pueden tener atributos id, ni name, ni class. -->
   <p>Carolina Moreno</p>
-</footer>
+  </footer>
   <script src="index.js" type="module"></script>
 </body>
 </html>

@@ -22,10 +22,16 @@ userInput.addEventListener('keyup', () => {
   wordLengthAverage.textContent = `Longitud media de palabras: ${analyzer.getAverageWordLength(text)}`;
 });
 
-// boton
+// boton de limpiar, no debe sólo limpiar el texto sino también reestablecer el contenido de resultados.
 resetButton.addEventListener('click', () => {
   userInput.value = '';
   userInput.focus();
+  wordCount.textContent = 'Recuento de palabras: 0';
+  characterCount.textContent = 'Recuento de caracteres: 0';
+  characterNoSpacesCount.textContent = 'Recuento de caracteres (sin espacios ni puntuación): 0';
+  numberCount.textContent = 'Recuento de números: 0';
+  numberSum.textContent = 'Suma total de números: 0';
+  wordLengthAverage.textContent = 'Longitud media de palabras: 0';
 });
 // La aplicación usa el selector del DOM querySelector.
 

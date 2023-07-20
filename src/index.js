@@ -17,8 +17,8 @@ userInput.addEventListener('keyup', () => {
   wordCount.textContent = `Recuento de palabras: ${analyzer.getWordCount(text)}`;
   characterCount.textContent = `Recuento de caracteres: ${analyzer.getCharacterCount(text)}`;
   characterNoSpacesCount.textContent = `Recuento de caracteres (sin espacios ni puntuación): ${analyzer.getCharacterCountExcludingSpaces(text)}`;
-  numberCount.textContent = `Recuento de números: ${analyzer.getNumberCount(text)}`; // se corrige el nombre de la función
-  numberSum.textContent = `Suma total de números: ${analyzer.getNumberSum(text)}`; // se corrige el nombre de la función
+  numberCount.textContent = `Recuento de números: ${analyzer.getNumberCount(text)}`; 
+  numberSum.textContent = `Suma total de números: ${analyzer.getNumberSum(text)}`; 
   wordLengthAverage.textContent = `Longitud media de palabras: ${analyzer.getAverageWordLength(text)}`;
 });
 
@@ -46,5 +46,3 @@ resetButton.addEventListener('click', () => {
 // Manipulación dinámica del DOM
 
 //La aplicación actualiza el atributo textContent o innerHTML de los <li> que mostrar las métricas del texto.
-
-

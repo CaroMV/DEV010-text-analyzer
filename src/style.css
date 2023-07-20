@@ -11,20 +11,19 @@
   /* estilo */
   body {
     font-family: Arial, sans-serif;
-    margin: 0 ;
-    padding: 0;
+    margin: 1px ;
+    padding: 1px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: var(--color-background);
     color: var(--color-dark);
   }
-  
-  h1 {
+ 
+  header {
     font-size: 28px;
-    margin: 0;
+    margin: 1px;
     color: var(--color-dark);
   }
   
@@ -36,8 +35,8 @@
   
   ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 1px;
+    margin: 1px;
   }
   
   button {
@@ -73,14 +72,15 @@
     height: 200px;
     padding: 10px;
     font-size: 16px;
-    background-color: var(--color-light);
     color: var(--color-dark);
     border: 3px solid var(--color-shadow, currentColor);
     border-radius: 5px;
     box-shadow: .3rem .3rem 0 var(--color-shadow, currentColor);
     resize: none;
     transition: box-shadow 0.3s ease;
-    margin-bottom: 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: var(--color-light);
     &--inverted {
         --color-background: var(--color-dark);
         color: var(--color-light);

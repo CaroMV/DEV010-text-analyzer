@@ -22,6 +22,7 @@ const analyzer = {
   }, 
 
   getAverageWordLength: (text) => {    
+    // Para pasar el test, debemos hacer una función que nos detecte las puntuaciones
     const regex = /[a-zA-ZáéíóúÁÉÍÓÚñÑ]+/g; //seleccionamos las letras y Ñs, estaba contando más palabras de las que debería
     const words = text.match(regex);
     
@@ -35,9 +36,18 @@ const analyzer = {
 
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string` (enteros o decimales).
-    const regex = /[-+]?\b\d+\b(?:\.\d+)?/g;
+    const regex = /\b\d+(?:[.,]\d+)?\b/g;
     const numbers = text.match(regex);
-    return numbers ? numbers.length: 0;
+    if (!numbers) {
+      return 0;
+    }
+
+    let numberCount = 0;
+  
+    for (let i = 0; i < numbers.length; i++) {
+      numberCount++;
+    }
+    return numberCount;
   },
 
   getNumberSum: (text) => {
@@ -62,37 +72,3 @@ const analyzer = {
 
 export default analyzer;
 
-
-//JavaScript
-//Tipos de datos primitivos
-
-//La aplicación convierte valores tipo string a tipo number.
-//Strings (cadenas de caracteres)
-
-//La aplicación usa métodos para manipular strings como split, trim o replace.
-//Variables (declaración, asignación, ámbito)
-
-//La aplicación declara variables con let y const.
-
-//La aplicación NO declara variables con var.
-
-//Uso de condicionales (if-else, switch, operador ternario, lógica booleana)
-
-//La aplicación usa el statement if..else para evaluar condiciones.
-
-//Uso de bucles/ciclos (while, for, for..of)
-
-//La aplicación usa el statement for para crear un bucle.
-//Funciones (params, args, return)
-
-//El objeto analyzer contiene un método getWordCount para calcular el recuento de palabras de un texto.
-
-//El objeto analyzer contiene un método getCharacterCount para calcular el recuento de caracteres de un texto.
-
-//El objeto analyzer contiene un método getCharacterCountExcludingSpaces para calcular el recuento de caracteres excluyendo espacios y signos de puntuación de un texto.
-
-//El objeto analyzer contiene un método getNumbersCount para contar cúantos números hay en un texto.
-
-//El objeto analyzer contiene un método getNumbersSum para la suma longitud media de los números en un texto.
-
-//El objeto analyzer contiene un método getAverageWordLength para calcular la longitud media de las palabras en un texto.

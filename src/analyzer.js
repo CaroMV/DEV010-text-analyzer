@@ -22,15 +22,17 @@ const analyzer = {
   }, 
 
   getAverageWordLength: (text) => {    
-    // Para pasar el test, debemos hacer una función que nos detecte las puntuaciones
-    const regex = /[a-zA-ZáéíóúÁÉÍÓÚñÑ]+/g; //seleccionamos las letras y Ñs, estaba contando más palabras de las que debería
+    // Para pasar el test, debemos hacer una función que nos detecte los signos para sumar caracteres e_e
+    const regex = /\b[\w']+\b/g; //seleccionamos las letras y Ñs, estaba contando más palabras de las que debería
     const words = text.match(regex);
     
     if (!words || words.length === 0) {
       return 0;
     } // ahora si habrán 0 palabras, asi que podrá haber un 0 de output
-    const totalLength = words.reduce((sum, word) => sum + word.length, 0);
-    const averageLength = totalLength / words.length;
+    const sumChar = words.reduce((total,word)=> total + word.length,0);
+    const validChar = words.filter(word=>!/^\d+$/.test(word));
+
+    const averageLength = sumChar/validChar.length
     return parseFloat(averageLength.toFixed(2)); // tofixed para redondear
   },
 

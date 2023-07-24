@@ -1,7 +1,7 @@
 ## Índice
 [TOC]
 
-![logo](./src/Imgs/logo2.png)
+![logo](./src/Imgs/logo.png)
 # TextAnalyzer: Analizador de texto
 
 Una herramienta útil para analizar y obtener métricas para cualquier texto que ingreses en tiempo real.
